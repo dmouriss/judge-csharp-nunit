@@ -32,7 +32,9 @@ using System.Reflection;
 [assembly: AssemblyTrademark("NUnit is a trademark of NUnit Software")]
 
 #if DEBUG
-#if NET45
+#if NET6_0
+[assembly: AssemblyConfiguration(".NET Framework 6 Debug")]
+#elif NET45
 [assembly: AssemblyConfiguration(".NET Framework 4.5 Debug")]
 #elif NET40
 [assembly: AssemblyConfiguration(".NET Framework 4.0 Debug")]
@@ -50,7 +52,9 @@ using System.Reflection;
 #error Missing AssemblyConfiguration attribute for this target.
 #endif
 #else
-#if NET45
+#if NET6_0
+[assembly: AssemblyConfiguration(".NET Framework 6")]
+#elif NET45
 [assembly: AssemblyConfiguration(".NET Framework 4.5")]
 #elif NET40
 [assembly: AssemblyConfiguration(".NET Framework 4.0")]

@@ -50,7 +50,9 @@ using System.Security;
                               "bee5e972a004ddd692dec8fa404ba4591e847a8cf35de21c2d3" +
                               "723bc8d775a66b594adeb967537729fe2a446b548cd57a6")]
 
-#if NET45
+#if NET6_0
+[assembly: AssemblyTitle("NUnit Framework (.NET Framework 6.0)")]
+#elif NET45
 [assembly: AssemblyTitle("NUnit Framework (.NET Framework 4.5)")]
 #elif NET40
 [assembly: AssemblyTitle("NUnit Framework (.NET Framework 4.0)")]
